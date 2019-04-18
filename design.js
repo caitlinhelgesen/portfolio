@@ -1,12 +1,4 @@
-function hamburger() {
-  console.log("ham")
-  var ham = document.getElementById("myNav");
-  if (ham.className === "nav") {
-    ham.className += "responsive";
-  } else {
-    ham.className = "nav";
-  }
-}
+
 
 // Carousel JS
 var slideIndex = 1;
@@ -34,22 +26,6 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-}
-
-// Typewriter
-
-window.addEventListener('load', typeWriter, false)
-var text = 0;
-var heading = 'nnovation Workshops; Technology Planning; Marketing Strategy; Corporate Communications & Media Engagement';
-var speed = 65;
-
-function typeWriter() {
-  console.log("typewriter function")
-  if (text < heading.length) {
-    document.getElementById("inno").innerHTML += heading.charAt(text);
-    text++;
-    setTimeout(typeWriter, speed);
-  }
 }
 
 //Accordian
