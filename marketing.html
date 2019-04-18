@@ -9,40 +9,72 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138280286-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'UA-138280286-1');
+  </script>
 
   <title>Marketing</title>
 </head>
 <body>
   <a href = "#skip-to-main" class="skip">skip to main content</a>
   <header>
-    <nav>
-      <ul>
-        <li><a href = "index.html">Caitlin Helgesen</a></li>
-        <li><a href = "uxresearch.html">UX Research</a></li>
-        <li><a href = "uxdesign.html">UX Design</a></li>
-        <li><a href = "marketing.html" class = "current">Marketing</a></li>
-        <li><a href = "about.html">About</a></li>
-      </ul>
+    <nav class="nav" id="myNav">
+        <a href = "index.html">Caitlin Helgesen</a>
+        <a href = "uxresearch.html">UX Research</a>
+        <a href = "uxdesign.html">UX Design</a>
+        <a href = "marketing.html" class = "current">Marketing</a>
+        <a href = "about.html">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+      </a>
     </nav>
   <h1 class="marketing">Marketing</h1>
-  <!--  <img src="images/Fpace.jpg" alt = "Car interior"/> -->
+   <!-- <img src="images/Fpace.jpg" alt = "Car interior"/> -->
   </header>
   <main id="skip-to-main" >
+    <div class=marketingText>
     <h2>Experienced Technology Marketing Professional</h2>
-    <p class= "innovation">Innovation Workshops; Technology Planning; Marketing Strategy; Corporate Communications & Media Engagement</p>
+    <p class="innovation" id="inno">I</p>
+  </div>
     <section class="customer">
       <div class="text">
       <h2>Customer Engagement</h2>
       <p>Managed cross-functional, international team at trade shows and conferences securing eight-fold increase in customer engagement</p>
-      </
-      <img src="images/CES10.jpg" alt = "CES Tradeshow booth"/>
+      </div>
+      <div class="flipcard">
+        <div class="innerflipcard">
+          <div class="frontflipcard">
+            <img src="images/CES10.jpg" alt = "CES Tradeshow booth"/>
+          </div>
+        <div class="backflipcard">
+          <p>Mitsubishi Electric Booth</p>
+          <p>2016 CES</p>
+          <p>Las Vegas, NV</p>
+        </div>
+      </div>
+    </div>
     </section>
     <section class="website">
       <div class="text">
       <h2>Website Redesign</h2>
       <p>Initiated, sourced and managed corporate website redesign and launched multi-platform social media program, increasing brand awareness</p>
-      <img src="images/MEAA_Website.jpg" alt = "Example of website redesign"/>
+      </div>
+      <div class="flipcard">
+        <div class="innerflipcard">
+          <div class="frontflipcard">
+            <img src="images/MEAA_Website.jpg" alt = "Example of website redesign"/>
+          </div>
+        <div class="backflipcard">
+        <p>Mitsubisi Electric Automotive America Website</p>
+        <p>Can be found at:</p>
+        <a href = "http://www.meaa-mea.com">www.meaa-mea.com</a>
+        </div>
     </section>
     </main>
 
@@ -51,5 +83,6 @@
       <a href = "https://www.linkedin.com/in/caitlindhelgesen/" aria-label= "link to linkedin"><i class="fab fa-linkedin"></i></a>
       <a href = "mailto:chelgese@umich.edu" aria-label= "link to email"><i class="far fa-envelope"></i></a>
     </footer>
+      <script src="style.js"></script>
     </body>
     </html>

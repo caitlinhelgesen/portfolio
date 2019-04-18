@@ -10,20 +10,30 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138280286-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138280286-1');
+  </script>
 
   <title>User Experience Research</title>
 </head>
 <body>
   <a href = "#skip-to-main" class="skip">skip to main content</a>
   <header>
-    <nav>
-      <ul>
-        <li><a href = "index.html">Caitlin Helgesen</a></li>
-        <li><a href = "uxresearch.html" class = "current">UX Research</a></li>
-        <li><a href = "uxdesign.html">UX Design</a></li>
-        <li><a href = "marketing.html">Marketing</a></li>
-        <li><a href = "about.html">About</a></li>
-      </ul>
+    <nav class="nav" id="myNav">
+        <a href = "index.html">Caitlin Helgesen</a>
+        <a href = "uxresearch.html" class = "current">UX Research</a>
+        <a href = "uxdesign.html">UX Design</a>
+        <a href = "marketing.html">Marketing</a>
+        <a href = "about.html">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+      </a>
     </nav>
     <h1 class="uxresearch">User Experience Research</h1>
     </header>
@@ -31,9 +41,9 @@
     <main id="skip-to-main" class="research">
 
       <!-- <img src="images/UXResearchheader.jpg" alt = " "/> -->
+      <h2>Advanced Driver Assistance Systems Visualization</h2>
       <p>Designed and conducted end-user studies, presented findings to enable advanced development ideation process</p>
       <section class = "design">
-        <h2>Advanced Driver Assistance Systems Visualization</h2>
         <h3>Design</h3>
         <img src= "images/MELCO_ADAS_Visualization_Images_Page_06.jpg" alt= "ADAS features of three vehicles: Tesla, Genesis and Mercedes S Class"/>
         <p>Researched and chose three vehicles that implemented ADAS features and communication methods in different ways </p>
@@ -58,6 +68,7 @@
     <a href = "https://www.linkedin.com/in/caitlindhelgesen/" aria-label= "link to linkedin"><i class="fab fa-linkedin"></i></a>
     <a href = "mailto:chelgese@umich.edu" aria-label= "link to email"><i class="far fa-envelope"></i></a>
   </footer>
+  <script src="style.js"></script>
   </body>
 
   </html>

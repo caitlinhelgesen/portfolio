@@ -8,22 +8,32 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.5.3/plyr.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138280286-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'UA-138280286-1');
+  </script>
 
   <title>User Experience Design</title>
 </head>
 <body>
   <a href = "#skip-to-main" class="skip">skip to main content</a>
   <header>
-    <nav>
-      <ul>
-        <li><a href = "index.html" class="homebutton">Caitlin Helgesen</a></li>
-        <li><a href = "uxresearch.html">UX Research</a></li>
-        <li><a href = "uxdesign.html" class = "current">UX Design</a></li>
-        <li><a href = "marketing.html">Marketing</a></li>
-        <li><a href = "about.html">About</a></li>
-      </ul>
+    <nav class="nav" id="myNav">
+        <a href = "index.html">Caitlin Helgesen</a>
+        <a href = "uxresearch.html">UX Research</a>
+        <a href = "uxdesign.html" class = "current">UX Design</a>
+        <a href = "marketing.html">Marketing</a>
+        <a href = "about.html">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+      </a>
     </nav>
     <h1 class="design_background">User Experience Design</h1>
     <!-- <img src="images/uxheader.jpg" alt = "UX Design tools" class ="headimg"/> -->
@@ -34,13 +44,29 @@
       <section class="design_list">
         <h2>User-Centered Interaction Design Coursework</h2>
         <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2hdG-sZC23Q" aria-label="prototype demonstration allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-        <ul>
-          <li>Objective: Use design thinking processes to develop an interactive system</li>
-          <li>Key Methodologies: Competitive analysis, user personas, paper prototyping, digital prototyping, storyboards, user testing</li>
-          <li>Result: Mid-fidelity prototype of interactive map to educate matriculating graduate students about housing in Ann Arbor</li>
-        </ul>
+        <!-- <ul> -->
+        <button class="accordian">Objective</button>
+          <div class="acctext">
+          <p>Use design thinking processes to develop an interactive system</p>
+        </div>
+        <button class="accordian">Key Methodologies</button>
+          <div class="acctext">
+          <p>Competitive analysis, user personas, paper prototyping, digital prototyping, storyboards, user testing</p>
+        </div>
+        <button class="accordian">Results</button>
+          <div class="acctext">
+          <p>Mid-fidelity prototype of interactive map to educate matriculating graduate students about housing in Ann Arbor</p>
+        </div>
+        <!-- </ul> -->
         <p>Problem Statement: Incoming graduate students at the University of Michigan are at a disadvantage because most housing is leased months prior to their acceptance.  Additionally, out-of-state students don’t know the area and often cannot visit.</p>
       </section>
+      <!-- Video Player Code from https://github.com/sampotts/plyr-->
+      <video id="player" playsinline controls>
+        <source src="video/beddi.mp4" type="video/mp4"/>
+      <!-- <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default /> -->
+      </video>
+
+    </div>
       <section class="skills">
       <h2>Skills Developed</h2>
       <ul>
@@ -56,17 +82,52 @@
 
       <h2 class=galleryhead>Design Defense</h2>
       <section class="gallery">
+        <div class="carouselImg">
+          <div class="carouselCount">1 of 11</div>
           <img src="images/beddi1.png" alt="final presentation for beddi product title page"/>
+        </div>
+        <div class="carouselImg">
+          <div class="carouselCount">2 of 11</div>
           <img src="images/beddi2.png" alt="final presentation problem statement: how can we help students find housing"/>
+        </div>
+        <div class="carouselImg">
+          <div class="carouselCount">3 of 11</div>
           <img src="images/beddi3.png" alt="final presentation solution: beddi"/>
+        </div>
+        <div class="carouselImg">
+          <div class="carouselCount">4 of 11</div>
           <img src="images/beddi4.png" alt="final presentation solution explanation: a housing website for grad students"/>
+        </div>
+        <div class="carouselImg">
+          <div class="carouselCount">5 of 11</div>
           <img src="images/beddi5.png" alt="final presentation explanation of exploration feature"/>
+        </div>
+        <div class="carouselImg">
+          <div class="carouselCount">6 of 11</div>
           <img src="images/beddi6.png" alt="final presentation explanation of information feature"/>
+        </div>
+        <div class="carouselImg">
+          <div class="carouselCount">7 of 11</div>
           <img src="images/beddi7.png" alt="final presentation explanation of connection feature"/>
+        </div>
+        <div class="carouselImg">
+          <div class="carouselCount">8 of 11</div>
           <img src="images/beddi8.png" alt="final presentation explanation of confirmation feature"/>
+        </div>
+        <div class="carouselImg">
+          <div class="carouselCount">9 of 11</div>
           <img src="images/beddi10.png" alt="final presentation explanation of challenges and opportunities"/>
+        </div>
+        <div class="carouselImg">
+          <div class="carouselCount">10 of 11</div>
           <img src="images/beddi11.png" alt="final presentation explanation of surprises"/>
+        </div>
+        <div class="carouselImg">
+          <div class="carouselCount">11 of 11</div>
           <img src="images/beddi12.png" alt="final presentation summary"/>
+        </div>
+        <a class="back" onclick="plusSlides(-1)" aria-label= "back arrow"><i class="fas fa-arrow-circle-left"></i></a>
+        <a class="forward" onclick="plusSlides(1)"aria-label= "next arrow"><i class="fas fa-arrow-circle-right"></i></a>
       </section>
     </main>
   <footer>
@@ -74,5 +135,9 @@
     <a href = "https://www.linkedin.com/in/caitlindhelgesen/" aria-label= "link to linkedin"><i class="fab fa-linkedin"></i></a>
     <a href = "mailto:chelgese@umich.edu" aria-label= "link to email"><i class="far fa-envelope"></i></a>
   </footer>
+    <script src="style.js"></script>
+    <script src="path/to/plyr.js"></script>
+    <script src="https://cdn.plyr.io/3.5.3/plyr.js"></script>
+
   </body>
   </html>

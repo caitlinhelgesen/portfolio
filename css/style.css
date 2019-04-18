@@ -9,31 +9,87 @@ img{
   width: 100%;
   height: 100%}
 
-nav{
+nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   background-color: #cccccc;
   font-family: 'Lato', sans-serif;
   align-items: center;
-}
-
-nav ul{
+  text-decoration: none;
   padding: 10px;
   color: #000066;
   text-align: center;
-  background-color: #e7e7e7;
+  background-color: #000000;
   color: black;
-  border: 2px solid #000000;
+  border-bottom: 2px solid #000000;
 }
-
+/* .nav .logo {
+  display: flex;
+  align-content: flex-start;
+} */
 /* nav ul li{
   align-items: center;
-} */
+/* } */
 
-nav ul li a{
+/* nav a{
   text-decoration: none;
   color: #000000;
+} */
+.nav a:link {
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
+.navresponsive a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.nav a:active{
+  background-color: #000000;
+  color: white;
+}
+
+nav a:visited{
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+nav a.current {
+ background-color: #000000;
+ color: #ffffff;
+ font-family: 'Roboto', sans-serif;
+ text-transform: uppercase;
+}
+.nav .icon {
+  display: none;
+}
+.nav a:not(:first-child) {display: none;}
+.nav a.icon {
+    display: block;
+  }
+.nav.responsive {position: relative;}
+.nav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+.nav.responsive a {
+    display: block;
+    text-align: left;
+  }
 
 h1{font-family:'Roboto', sans-serif;
   font-weight: 900;
@@ -55,10 +111,12 @@ a.skip{
 	position: relative;
     top: -80px;
     transition: top ease-in .5s;
+  z-index: 2;
 }
 
 a.skip:focus{
 	background: white;
+  color: #000000;
 	top: 0px;
 	border: 1px solid black;
 }
@@ -71,7 +129,7 @@ ul{
   text-decoration: none;
 }
 
-.current{
+/* .current{
   text-transform: uppercase;
   text-decoration: none;
   font-family: 'roboto';
@@ -83,8 +141,8 @@ ul{
   height: auto;
   margin: 10px;
   text-decoration: none;
-  padding: 1%; */
-  }
+  padding: 1%;
+  /* } */
 
 nav ul li .home{
   font-family: 'Lato';
@@ -94,12 +152,17 @@ nav ul li .home{
 
 footer{
 display: grid;
-background-color: #ffffff;
+background-color: #000000;
+color: #ffffff;
+font-family: 'Lato', sans-serif;
 grid-template-columns: 33% 33% 33%;
-height: auto;
+height: 10vh;
 justify-items: center;
 align-items: center;
 
+}
+.far.fa-copyright.fa{
+font-family: 'Lato', sans-serif;
 }
 main{
   display: flex;
@@ -123,6 +186,7 @@ main{
 .about_head{
   color: #000000;
   text-align: center;
+  padding: 2%;
 }
 .about img{
   max-width: 75%;
@@ -133,14 +197,14 @@ main{
   margin: 5%;
 
 }
-.about a{
+.resume {
     align-self: center;
     background-color: #e7e7e7;
     color: black;
     border: 2px solid #000000;
-    width: auto;
-    height: auto;
-    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
     text-decoration: none;
     padding: 1%;
 
@@ -214,10 +278,9 @@ font-family: 'Roboto';
   text-decoration: none;
 }
 .gallery{
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
-.gallery img{
+/* .gallery img{
   width:95%;
   height: 95%;
   max-width: 100%;
@@ -226,8 +289,47 @@ font-family: 'Roboto';
   height:auto;
   align-self: center;
   margin: 5%;
+} */
+
+
+.carouselImg{
+  display: block;
+  height: auto;
+  width: auto;
+  margin: auto;
 }
 
+#player{
+height: auto;
+height: 80vh;
+margin: auto;
+padding: 10%;
+}
+
+.fas.fa-circle-arrow-left{
+  display: block;
+}
+
+.next{
+  display: block;
+}
+.accordian{
+  width: 100%;
+  height: 10vh;
+  font-family: 'roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: medium;
+  transition: 1s;
+}
+.active .accordian:hover{
+  background-color: #000000;
+}
+.acctext{
+  padding: 2%;
+  margin: auto;
+  display: none;
+  overflow: hidden;
+}
 /*  --------- UX RESEARCH PAGE ---------*/
 .research{
   display: flex;
@@ -259,7 +361,20 @@ text-transform: uppercase;
 font-family: 'Roboto';
 }
 
+.design{
+  margin: auto;
+}
+.design p{
+  width: 75%;
+  padding: 2%;
+}
+.implementation{
+  margin: auto;
+}
 
+.results{
+  margin: auto;
+}
 /*
 .research_background{
   display: flex;
@@ -290,10 +405,9 @@ text-align: center;
   display: none;
 }
 .homelinks a{
-  display: flex;
+display: flex;
 flex-direction: column;
 /* justify-content: center; */
-/* margin: .5em; */
 padding: .5em;
 }
 
@@ -316,24 +430,29 @@ text-align: center;
 	.about_img img{
 		width: 100%;
 		height: 75vh; */
-
+.break{
+  margin: auto;
+}
 
 @media screen and (min-width:750px) {
 	.about_img img{
 		width: 45%;
 		height: 75vh;
   }
-
-    nav ul{
+.nav{
+  position: fixed;
+  z-index: 1;
+}
+    /* .nav ul{
     display: flex;
     padding: 10px;
     color: #000066;
     text-align: center;
     width: 100%;
     justify-content: center
-    }
+    } */
 
-    nav ul li a {
+    /* .nav ul li a {
       text-decoration: none;
       color: #000000;
       display: flex;
@@ -341,42 +460,31 @@ text-align: center;
       padding: 2em;
       align-self: stretch;
       justify-content: center;
+    } */
+    .nav a:not(:first-child) {
+    display: block;
     }
 
-    .gallery {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: .5em;
-        justify-content: center;
-    }
-
-    .gallery img{
-        width: 40%;
-        height: auto;
-        margin: 1em;
-
-    }
-    .skills ul{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-bottom: 1em;
-    }
-
+/* --------- Marketing PAGE ---------*/
   .customer{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 98%;
+    /* grid-template-rows: 98%; */
     margin: 1em;
 }
 
   .customer img{
     width: auto;
+    height: 40vh;
     margin: auto;
   }
-  .customer p{
+
+  .text {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+  }
+  /* .customer p{
     display:flex;
     width:25%;
     text-align: center;
@@ -384,7 +492,7 @@ text-align: center;
     margin-top: 1em;
     margin-bottom: 1.5em;
     padding: .5em;
-  }
+  } */
   /* .customer h2{
     display: flex;
     margin: auto;
@@ -392,22 +500,79 @@ text-align: center;
     margin-bottom: .5em;
     padding: .5em;
   } */
+
+  .flipcard{
+    background-color: transparent;
+    width: 50%;
+    height: 40vh;
+    margin: auto;
+    perspective: 1000px;
+    /* z-index: -1; */
+  }
+
+  .innerflipcard{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flipcard:hover .innerflipcard{
+    transform: rotateY(180deg);
+  }
+  .frontflipcard, .backflipcard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  }
+  .backflipcard {
+    background-color: #343538;
+    color: white;
+    width: 40vh;
+    margin: auto;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    transform: rotateY(180deg);
+  }
+
+  .backflipcard :visited{
+    color: #ffffff;
+    text-decoration: none;
+  }
   .website{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 98%;
+    /* grid-template-rows: 1fr; */
     margin: 1em;
   }
 
   .website img{
     width: auto;
+    height: 35vh;
+    margin: auto;
+    order: 0;
   }
-  .website p{
+    .website .text {
+      order:1;
+    }
+  /* .website p{
     display:flex;
     width:25%;
     text-align: center;
     align-self: center;
-  }
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    padding: .5em;
+  } */
+  /* .website p{
+    display:flex;
+    width:25%;
+    text-align: center;
+    align-self: center;
+  } */
   /* .website h2{
     display: flex;
     margin: auto;
@@ -416,15 +581,49 @@ text-align: center;
     padding: .5em;
   } */
 }
-@media screen and (min-width:1000px) {
 
-  nav{
+/* --------- UX Design PAGE ---------*/
+.gallery {
     display: flex;
     flex-direction: row;
+    max-width: 98%;
+    flex-wrap: wrap;
+    margin: .5em;
+    justify-content: center;
+}
+
+.gallery img{
+    width: 45%;
+    height: auto;
+    margin: 1em;
+
+}
+.skills ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+/* .galery img {
+  vertical-align: middle;
+} */
+
+@media screen and (min-width:859px) {
+
+  nav{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-color: #cccccc;
     font-family: 'Lato', sans-serif;
   }
-
+  .nav a.icon{
+    display: none;
+  }
   nav ul{
     display: flex;
     padding: 10px;
@@ -437,30 +636,36 @@ text-align: center;
   }
 
 
-
-
-
-main{
-  display: flex;
-flex-direction: row;
-justify-content: flex-start;
-flex-wrap: wrap;
-}
 /*  --------- ABOUT PAGE ---------*/
 
-  .about{display: flex;
-    flex-direction: row;
+  .about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
 }
-
   .about img{
-    width:65%;
-    align-self: flex-end;
-
+    max-width: 98%;
+    display: grid;
+    /* height: 90vh; */
+    margin: auto;
+    max-height: 95%;
+    width: auto;
+    height: auto;
+    align-self: center;
+    padding: 5%;
+}
+  .aboutText{
+  display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 80%;
+  margin: auto;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  text-align: right;
+  align-items: center;
   }
-
   .about p{
-    width: 45%;
+    margin: auto;
   }
   .about a {
     margin-left: 10%;
@@ -492,11 +697,10 @@ flex-wrap: wrap;
 }
 
   .gallery img{
-    width:25%;
+    width:98%;
     height: auto;
     margin: 1em;
   }
-
 
 .skills ul{
     display: flex;
@@ -515,13 +719,10 @@ flex-wrap: wrap;
 /*  --------- HOMEPAGE ---------*/
 
 
-.homelinks a{
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  margin: .5em;
-  width: 30%;
-  padding: .5em;
+.homelinks{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
 }
 .homelinks a img{
   order: 1;
@@ -560,7 +761,7 @@ text-align: center;
   flex-direction: row;
 
 }
-/*  --------- HOMEPAGE ---------*/
+/*  --------- Marketing ---------*/
 
 .marketing {
 display: flex;
@@ -597,9 +798,14 @@ text-align: center;
     width: 20%;
   }
   .innovation {
+    display: block;
     margin:auto;
   }
-
+.marketingText{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: auto;
+}
 
   /*  --------- UX Research ---------*/
 
@@ -639,6 +845,5 @@ text-align: center;
   .research.summary{
     display:flex;
   } */
-
 
 }
