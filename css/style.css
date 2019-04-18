@@ -504,6 +504,7 @@ text-align: center;
 background-attachment: fixed;
 background-position: center;
 height: 100%;
+z-index: -1;
 }
 
 .homepage p{
@@ -872,7 +873,7 @@ height: 100%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .homebutton {
