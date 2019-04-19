@@ -13,20 +13,21 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("carouselImg");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
+  var index; //this is my counting variable
+  var slides = document.getElementsByClassName("carouselImg"); //this gets my class and assigns it to a variable
+  var dots = document.getElementsByClassName("dot"); //this assigns the dots beneath my carousel to a variable
+  if (n > slides.length) {slideIndex = 1} //this starts my carousel at the beginning
+  if (n < 1) {slideIndex = slides.length} //this protects for zero length because people are not always smart
+  for (i = 0; i < slides.length; i++) //hello iteration; this increases once each time
+      {
+        slides[i].style.display = "none"; 
+        }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace("active", "");
-  }
+      }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += "active";
-}
+  }
 
 //Accordian
 

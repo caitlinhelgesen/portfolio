@@ -326,7 +326,7 @@ font-family: 'Roboto';
   transition: background-color 0.6s ease;
 }
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #eaebed;
 }
 /* .gallery img{
   width:95%;
