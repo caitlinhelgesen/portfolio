@@ -657,6 +657,7 @@ height: 100%;
   .flipcard:hover .innerflipcard{
     transform: rotateY(180deg);
   }
+
   .frontflipcard, .backflipcard {
   position: absolute;
   width: 100%;
@@ -667,7 +668,7 @@ height: 100%;
     display: block;
     background-color: #343538;
     color: white;
-    width: 100%;
+    width: 75%;
     margin: auto;
     font-family: 'Lato', sans-serif;
     transform: rotateY(180deg);
@@ -748,7 +749,7 @@ height: 100%;
   vertical-align: middle;
 } */
 
-@media screen and (min-width:859px) {
+@media screen and (min-width:950px) {
 
 
 /*  --------- ABOUT PAGE ---------*/
